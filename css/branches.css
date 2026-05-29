@@ -1,0 +1,262 @@
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.escotistas-filtros {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  gap: 12px;
+
+  margin-top: 45px;
+  padding-bottom: 10px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.escotistas-filtros::-webkit-scrollbar {
+  display: none;
+}
+
+.filtro-btn {
+  flex: 0 0 auto;
+  white-space: nowrap;
+
+  border: none;
+  outline: none;
+
+  padding: 14px 22px;
+
+  border-radius: 100px;
+
+  background:
+    linear-gradient(135deg,
+      rgba(255, 29, 37, .08) 0%,
+      rgba(197, 0, 0, .08) 100%);
+
+  border:
+    1px solid rgba(255, 29, 37, .12);
+
+  color: #ff0000;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: .35s ease;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, .06);
+}
+
+.filtro-btn.active {
+  background:
+    linear-gradient(135deg,
+      #ffcc00 0%,
+      #ff9800 100%);
+
+  color: #420000;
+
+  border-color:
+    rgba(255, 204, 0, .35);
+
+  box-shadow:
+    0 10px 28px rgba(255, 204, 0, .28);
+}
+
+/* =========================================================
+   CHEFIA SECTION
+========================================================= */
+
+.chefia-section{
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px;
+
+  background: linear-gradient(135deg,
+    #ff1d25 0%,
+    #c50000 35%,
+    #5b0202 100%);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.chefia-header{
+  width: 100%;
+  margin-bottom: 55px;
+  padding-top: 10px;
+}
+
+.chefia-badge{
+  display: inline-block;
+
+  padding: 12px 24px;
+  border-radius: 100px;
+
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+
+  color: #ffcc00;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+}
+
+.chefia-header h2{
+  font-size: 52px;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   GRID (4 CARDS POR LINHA)
+========================================================= */
+
+.chefia-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* =========================================================
+   RAMO
+========================================================= */
+
+/* =========================================================
+   BOX
+========================================================= */
+
+.chefia-box{
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1850px;
+  margin: auto;
+
+  padding: 80px;
+  border-radius: 40px;
+
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+/* =========================================================
+   ÁREA
+========================================================= */
+
+.chefia-area{
+  width: 100%;
+  animation: fadeSection .45s ease;
+}
+
+.chefia-area + .chefia-area{
+  margin-top: 120px;
+}
+
+.chefia-area.hidden{
+  display: none;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.chefia-layout{
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+/* =========================================================
+   CARD DA FOTO
+========================================================= */
+
+.chefia-card{
+  width: 40%;
+  min-width: 380px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  border-radius: 32px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(10px);
+}
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.chefia-foto{
+  width: 100%;
+  height: 100%;
+}
+
+.chefia-foto img{
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  border-radius: 32px;
+
+  /* REMOVE HOVER */
+  transition: none;
+}
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.chefia-content{
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  color: #ffffff;
+}
+
+.chefia-content p{
+  color: #ffffff;
+
+  font-size: 1.05rem;
+  line-height: 2;
+
+  text-align: justify;
+
+  text-indent: 40px;
+
+  margin-bottom: 24px;
+}

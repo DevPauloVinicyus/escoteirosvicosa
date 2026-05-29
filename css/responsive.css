@@ -1,0 +1,845 @@
+/* =========================================================
+   RESPONSIVIDADE GLOBAL
+========================================================= */
+
+html,
+body{
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section{
+  overflow: hidden;
+}
+
+/* =========================================================
+   NOTEBOOK / TABLET GRANDE
+========================================================= */
+
+@media (max-width: 1199px){
+
+  /* HERO */
+
+  .gradient-banner{
+    padding: 120px 0 90px;
+  }
+
+  .gradient-banner h1{
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .gradient-banner p{
+    font-size: 17px;
+  }
+
+  /* VIDEO */
+
+  .video-promo{
+    padding: 100px 30px;
+  }
+
+  /* RAMOS */
+
+  .ramos-grid{
+    gap: 30px;
+  }
+
+  .ramo-item{
+    padding: 20px;
+  }
+
+  /* TEAM */
+
+  .chefia-grid1{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .chefia-box1{
+    padding: 65px;
+  }
+
+  .chefia-header1 h2{
+    font-size: 44px;
+  }
+
+  /* FOOTER */
+
+  .footer-center-image img{
+    max-width: 260px;
+  }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 991px){
+
+  /* =====================================================
+     FIX GLOBAL
+  ===================================================== */
+
+  html,
+  body{
+    overflow-x: hidden !important;
+  }
+
+  body{
+    width: 100%;
+  }
+
+  .container,
+  .container-fluid{
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  [class*="col-"]{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  section,
+  .section{
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  p,
+  li{
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5{
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* =====================================================
+     NAVBAR
+  ===================================================== */
+
+  #nav-principal{
+    padding: 10px 20px;
+  }
+
+  .img-logo{
+    max-width: 180px;
+  }
+
+  .navbar-collapse{
+    background: #ffffff;
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  }
+
+  .navbar-nav{
+    width: 100%;
+    gap: 5px;
+  }
+
+  .navbar-nav .nav-link{
+    padding: 14px 18px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  /* =====================================================
+     TOPBAR
+  ===================================================== */
+
+  .topbar-buttons{
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .top-btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .gradient-banner{
+    padding: 120px 0 70px;
+    text-align: center;
+  }
+
+  .gradient-banner .row{
+    gap: 50px;
+  }
+
+  .gradient-banner h1{
+    font-size: 38px;
+  }
+
+  .gradient-banner p{
+    font-size: 16px;
+
+    margin: 0 auto 30px;
+
+    max-width: 650px;
+  }
+
+  .gradient-banner .btn{
+    margin: 0 auto;
+  }
+
+  .gradient-banner img{
+    max-width: 450px;
+  }
+
+  /* =====================================================
+     VIDEO
+  ===================================================== */
+
+  .video-promo{
+    padding: 90px 20px;
+    min-height: auto;
+  }
+
+  .video-promo .content-block{
+    width: 100%;
+  }
+
+  .video-promo h2{
+    font-size: 34px;
+    line-height: 1.3;
+  }
+
+  /* =====================================================
+     RAMOS
+  ===================================================== */
+
+  .pull-top{
+    margin-top: 0;
+  }
+
+  .rounded.shadow.p-5.bg-white{
+    padding: 35px !important;
+  }
+
+  .ramos-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .ramo-item{
+    padding: 25px 20px;
+  }
+
+  /* =====================================================
+     TEAM PAGE
+  ===================================================== */
+
+  .chefia-box1{
+    padding: 50px 35px;
+    border-radius: 30px;
+  }
+
+  .chefia-area1 + .chefia-area1{
+    margin-top: 90px;
+  }
+
+  .chefia-header1{
+    margin-bottom: 40px;
+  }
+
+  .chefia-header1 h2{
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .chefia-badge1{
+    font-size: 11px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+  }
+
+  .chefia-grid1{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .chefia-card1{
+    max-width: 100%;
+    border-radius: 24px;
+  }
+
+  .escotistas-filtros1{
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 35px;
+    padding-bottom: 8px;
+  }
+
+  .filtro-btn1{
+    padding: 12px 18px;
+    font-size: 11px;
+  }
+
+  /* =====================================================
+     ABOUT / LEGACY
+  ===================================================== */
+
+  .history-grid,
+  .history-grid1{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 45px !important;
+  }
+
+  .history-text,
+  .history-text1{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .history-text h2,
+  .history-text1 h2,
+  .section-title h2,
+  .section-title1 h2{
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  .history-text p,
+  .history-text1 p,
+  .blog-content p,
+  .blog-content1 p,
+  .section-title p,
+  .section-title1 p,
+  .law-item p,
+  .law-item1 p{
+    font-size: 1rem !important;
+    line-height: 1.95 !important;
+
+    text-align: justify !important;
+
+    text-indent: 25px !important;
+  }
+
+  .history-slider,
+  .history-slider1{
+    width: 100% !important;
+    max-width: 100% !important;
+
+    border-radius: 24px !important;
+
+    overflow: hidden !important;
+  }
+
+  .slider-track,
+  .slider-track1{
+    min-height: 450px;
+  }
+
+  .slide,
+  .slide1{
+    padding: 20px !important;
+  }
+
+  .slide img,
+  .slide1 img{
+    width: 100% !important;
+
+    max-height: 500px !important;
+
+    object-fit: contain !important;
+
+    margin: auto !important;
+  }
+
+  .blog-content,
+  .blog-content1{
+    column-count: 1 !important;
+    column-gap: 0 !important;
+  }
+
+  .law-grid,
+  .law-grid1{
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 24px !important;
+  }
+
+  .law-column,
+  .law-column1{
+    width: 100% !important;
+    gap: 24px !important;
+  }
+
+  .law-item,
+  .law-item1{
+    width: 100% !important;
+
+    padding: 30px 24px !important;
+
+    border-radius: 24px !important;
+  }
+
+  .law-number,
+  .law-number1{
+    position: relative !important;
+
+    display: block !important;
+
+    top: auto !important;
+    right: auto !important;
+
+    font-size: 2.5rem !important;
+
+    margin-bottom: 15px !important;
+  }
+
+  .law-item h3,
+  .law-item1 h3{
+    font-size: 1.2rem !important;
+
+    line-height: 1.5 !important;
+
+    padding-right: 0 !important;
+
+    margin-bottom: 18px !important;
+  }
+
+  /* =====================================================
+     TESTIMONIAL
+  ===================================================== */
+
+  .testimonial{
+    padding: 80px 0;
+  }
+
+  .testimonial .block{
+    padding: 35px 25px;
+  }
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
+
+  .footer .row{
+    gap: 50px;
+    row-gap: 50px !important;
+  }
+
+  .footer-info,
+  .footer-links,
+  .footer-center-image{
+    text-align: center !important;
+  }
+
+  .footer-center-image{
+    order: -1;
+  }
+
+  .footer-links-grid{
+    justify-content: center !important;
+    gap: 40px !important;
+  }
+
+  .footer-image-left{
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-social{
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .center-logo img{
+    max-width: 140px;
+    margin: auto;
+  }
+
+  .footer-copyright .row{
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .footer-copyright .col-auto{
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMARTPHONES
+========================================================= */
+
+@media (max-width: 767px){
+
+  /* GERAL */
+
+  .section{
+    padding: 70px 0;
+  }
+
+  /* HERO */
+
+  .gradient-banner{
+    padding: 110px 0 60px;
+  }
+
+  .gradient-banner h1{
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .gradient-banner p{
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .gradient-banner img{
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+
+  .btn-main-md{
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* VIDEO */
+
+  .video-promo{
+    padding: 70px 15px;
+  }
+
+  .video-promo h2{
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .video-promo p{
+    font-size: 15px;
+  }
+
+  .video-play-btn{
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+  }
+
+  /* RAMOS */
+
+  .rounded.shadow.p-5.bg-white{
+    padding: 25px !important;
+    border-radius: 25px !important;
+  }
+
+  .ramos-grid{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ramo-item{
+    padding: 25px 15px;
+  }
+
+  .ramo-item h3{
+    font-size: 20px;
+  }
+
+  .ramo-item p{
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* =====================================================
+     TEAM PAGE
+  ===================================================== */
+
+  .faq-escoteiro{
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .chefia-box1{
+    padding: 35px 22px;
+    border-radius: 24px;
+  }
+
+  .chefia-area1 + .chefia-area1{
+    margin-top: 70px;
+  }
+
+  .chefia-header1{
+    margin-bottom: 30px;
+  }
+
+  .chefia-header1 h2{
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .chefia-badge1{
+    font-size: 10px;
+    padding: 9px 16px;
+  }
+
+  .chefia-grid1{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .chefia-card1{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 22px;
+  }
+
+  .chefia-foto1{
+    width: 100%;
+  }
+
+  .escotistas-filtros1{
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    margin-top: 28px;
+
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .filtro-btn1{
+    padding: 11px 16px;
+    font-size: 10px;
+    border-radius: 100px;
+  }
+
+  /* ABOUT */
+
+  .history-text h2,
+  .history-text1 h2,
+  .section-title h2,
+  .section-title1 h2{
+    font-size: 2.3rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .history-text p,
+  .history-text1 p,
+  .blog-content p,
+  .blog-content1 p,
+  .section-title p,
+  .section-title1 p,
+  .law-item p,
+  .law-item1 p{
+    font-size: 1rem !important;
+    line-height: 1.95 !important;
+    text-indent: 0 !important;
+  }
+
+  .history-slider,
+  .history-slider1{
+    height: 360px !important;
+  }
+
+  .law-item,
+  .law-item1{
+    padding: 28px 22px !important;
+  }
+
+  /* TESTIMONIAL */
+
+  .section-title1 h2{
+    font-size: 25px;
+  }
+
+  .testimonial .block{
+    padding: 30px 20px;
+  }
+
+  .testimonial .block p{
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* FOOTER */
+
+  .footer{
+    text-align: center;
+  }
+
+  .footer h5{
+    font-size: 24px;
+  }
+
+  .footer p,
+  .footer a{
+    font-size: 15px;
+  }
+
+  .footer-links-grid{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .links-column{
+    width: 100%;
+  }
+
+  .footer-center-image img{
+    max-width: 180px;
+  }
+
+  .footer-image-left img{
+    max-width: 220px;
+  }
+
+  .footer-social{
+    gap: 18px;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   SMARTPHONES PEQUENOS
+========================================================= */
+
+@media (max-width: 480px){
+
+  /* NAVBAR */
+
+  .img-logo{
+    max-width: 150px;
+  }
+
+  /* HERO */
+
+  .gradient-banner h1{
+    font-size: 26px;
+  }
+
+  .gradient-banner p{
+    font-size: 14px;
+  }
+
+  .gradient-banner img{
+    max-width: 260px;
+  }
+
+  /* VIDEO */
+
+  .video-promo h2{
+    font-size: 22px;
+  }
+
+  /* RAMOS */
+
+  .ramo-item{
+    padding: 20px 12px;
+  }
+
+  .ramo-item img{
+    width: 80px;
+  }
+
+  /* TEAM */
+
+  .chefia-box1{
+    padding: 28px 16px;
+    border-radius: 20px;
+  }
+
+  .chefia-header1 h2{
+    font-size: 24px;
+  }
+
+  .chefia-badge1{
+    font-size: 9px;
+    letter-spacing: .5px;
+  }
+
+  .chefia-grid1{
+    gap: 18px;
+  }
+
+  .filtro-btn1{
+    font-size: 9px;
+    padding: 10px 14px;
+  }
+
+  /* ABOUT */
+
+  .history-text h2,
+  .history-text1 h2,
+  .section-title h2,
+  .section-title1 h2{
+    font-size: 2rem !important;
+  }
+
+  .history-slider,
+  .history-slider1{
+    height: 290px !important;
+  }
+
+  .law-item,
+  .law-item1{
+    padding: 24px 18px !important;
+  }
+
+  .law-number,
+  .law-number1{
+    font-size: 2rem !important;
+  }
+
+  /* TESTIMONIAL */
+
+  .testimonial .block{
+    padding: 25px 18px;
+  }
+
+  /* FOOTER */
+
+  .footer-social{
+    gap: 14px;
+  }
+
+  .footer-social i{
+    font-size: 24px !important;
+  }
+}

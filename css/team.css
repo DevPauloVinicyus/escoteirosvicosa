@@ -1,0 +1,206 @@
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.escotistas-filtros1 {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  gap: 12px;
+
+  margin-top: 45px;
+  padding-bottom: 10px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.escotistas-filtros1::-webkit-scrollbar {
+  display: none;
+}
+
+.filtro-btn1 {
+  flex: 0 0 auto;
+  white-space: nowrap;
+
+  border: none;
+  outline: none;
+
+  padding: 14px 22px;
+
+  border-radius: 100px;
+
+  background:
+    linear-gradient(135deg,
+      rgba(255, 29, 37, .08) 0%,
+      rgba(197, 0, 0, .08) 100%);
+
+  border:
+    1px solid rgba(255, 29, 37, .12);
+
+  color: #ff0000;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: .35s ease;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, .06);
+}
+
+.filtro-btn1.active {
+  background:
+    linear-gradient(135deg,
+      #ffcc00 0%,
+      #ff9800 100%);
+
+  color: #420000;
+
+  border-color:
+    rgba(255, 204, 0, .35);
+
+  box-shadow:
+    0 10px 28px rgba(255, 204, 0, .28);
+}
+
+/* =========================================================
+   RAMO
+========================================================= */
+
+/* =========================================================
+   BOX
+========================================================= */
+
+.chefia-box1{
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1850px;
+  margin: auto;
+
+  padding: 80px;
+  border-radius: 40px;
+
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+/* =========================================================
+   ÁREA
+========================================================= */
+
+.chefia-area1{
+  width: 100%;
+  animation: fadeSection .45s ease;
+}
+
+.chefia-area1 + .chefia-area1{
+  margin-top: 120px;
+}
+
+.chefia-area1.hidden{
+  display: none;
+}
+
+/* =========================================================
+   CARD (AGORA É A IMAGEM)
+========================================================= */
+
+.chefia-card1{
+  width: 100%;
+  max-width: 382.17px;
+
+  margin: auto;
+
+  border-radius: 32px;
+  overflow: hidden;
+
+  background: rgb(253, 253, 253);
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(10px);
+
+  transition: .35s ease;
+}
+
+/* =========================================================
+   FOTO (PROPORÇÃO FIXA)
+========================================================= */
+
+.chefia-foto1{
+  width: 100%;
+  aspect-ratio: 382.17 / 467;
+  overflow: hidden;
+}
+
+.chefia-foto1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  display: block;
+  transition: .5s ease;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.chefia-header1{
+  width: 100%;
+  margin-bottom: 55px;
+  padding-top: 10px;
+}
+
+.chefia-badge1{
+  display: inline-block;
+
+  padding: 12px 24px;
+  border-radius: 100px;
+
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+
+  color: #ffcc00;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+}
+
+.chefia-header1 h2{
+  font-size: 52px;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   GRID (4 CARDS POR LINHA)
+========================================================= */
+
+.chefia-grid1{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
