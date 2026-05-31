@@ -1,845 +1,658 @@
 /* =========================================================
-   RESPONSIVIDADE GLOBAL
+   NAVBAR MOBILE COMPLETA
 ========================================================= */
 
-html,
-body{
-  overflow-x: hidden;
-  width: 100%;
-}
+@media (max-width: 991.98px){
 
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+  /* ----------------------------------
+     TOPBAR
+  ---------------------------------- */
 
-.section{
-  overflow: hidden;
+  #nav-info{
+    height:auto !important;
+    padding:10px 15px !important;
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+  }
+
+  .topbar-buttons{
+    display:flex !important;
+    position:static !important;
+    transform:none !important;
+
+    width:100%;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+  }
+
+  .top-btn{
+    font-size:11px;
+    padding:0 12px;
+    height:30px;
+  }
+
+  /* ----------------------------------
+     NAVBAR
+  ---------------------------------- */
+
+  #nav-principal{
+
+    padding:12px 15px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:flex-start !important;
+
+    min-height:80px;
+
+    position:relative;
+  }
+
+  /* MENU ESQUERDA */
+
+  .navbar-toggler{
+
+    order:1 !important;
+
+    display:flex !important;
+
+    align-items:center;
+    justify-content:center;
+
+    width:42px;
+    height:42px;
+
+    margin:0 !important;
+
+    border:none !important;
+
+    background:transparent !important;
+
+    flex-shrink:0;
+  }
+
+  /* LOGO AO LADO */
+
+  #nav-principal .navbar-brand{
+
+    order:2 !important;
+
+    margin:0 0 0 15px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+  }
+
+  .img-logo{
+
+    width:auto !important;
+
+    max-width:240px !important;
+
+    height:auto !important;
+  }
+
+  /* ----------------------------------
+     HAMBURGER
+  ---------------------------------- */
+
+  .navbar-toggler-icon{
+
+    width:32px !important;
+
+    height:24px !important;
+
+    position:relative;
+
+    display:block;
+
+    background:none !important;
+  }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after,
+  .navbar-toggler-icon span{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:#111;
+
+    transition:.3s ease;
+  }
+
+  .navbar-toggler-icon::before{
+    top:0;
+  }
+
+  .navbar-toggler-icon span{
+    top:10px;
+  }
+
+  .navbar-toggler-icon::after{
+    bottom:0;
+  }
+
+  /* X */
+
+  .navbar-toggler.active .navbar-toggler-icon::before{
+
+    top:10px;
+
+    transform:rotate(45deg);
+  }
+
+  .navbar-toggler.active .navbar-toggler-icon::after{
+
+    bottom:11px;
+
+    transform:rotate(-45deg);
+  }
+
+  .navbar-toggler.active .navbar-toggler-icon span{
+    opacity:0;
+  }
+
+  /* ----------------------------------
+     MENU MOBILE
+  ---------------------------------- */
+
+  #navbarCollapse{
+
+    position:absolute !important;
+
+    top:100% !important;
+
+    left:0 !important;
+
+    width:100% !important;
+
+    background:#fff !important;
+
+    display:block !important;
+
+    max-height:0 !important;
+
+    overflow:hidden !important;
+
+    opacity:0 !important;
+
+    visibility:hidden !important;
+
+    transition:.35s ease !important;
+
+    z-index:9999;
+  }
+
+  #navbarCollapse.show{
+
+    max-height:100vh !important;
+
+    opacity:1 !important;
+
+    visibility:visible !important;
+  }
+
+  #nav-principal .navbar-nav{
+
+    width:100% !important;
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    gap:25px !important;
+
+    padding:30px 20px !important;
+  }
+
+  #nav-principal .nav-link{
+
+    width:auto !important;
+
+    padding:0 !important;
+
+    margin:0 !important;
+
+    font-size:20px !important;
+
+    line-height:1.4;
+
+    text-align:center;
+
+    white-space:normal !important;
+  }
+
+  /* REMOVE LINHAS */
+
+  #nav-principal .nav-link::after{
+    display:none !important;
+  }
+
 }
 
 /* =========================================================
-   NOTEBOOK / TABLET GRANDE
+   RAMOS RESPONSIVO
 ========================================================= */
 
-@media (max-width: 1199px){
+/* NOTEBOOKS */
 
-  /* HERO */
+@media (max-width: 1200px){
 
-  .gradient-banner{
-    padding: 120px 0 90px;
-  }
+	.ramos-grid{
+		display:grid;
+		grid-template-columns: repeat(3,1fr);
+		gap:30px;
+	}
 
-  .gradient-banner h1{
-    font-size: 42px;
-    line-height: 1.2;
-  }
+	.pull-top .container{
+		max-width:95%;
+	}
 
-  .gradient-banner p{
-    font-size: 17px;
-  }
+	.pull-top .rounded{
+		padding:60px 35px !important;
+	}
+}
 
-  /* VIDEO */
+/* TABLETS */
 
-  .video-promo{
-    padding: 100px 30px;
-  }
+@media (max-width: 991px){
 
-  /* RAMOS */
+	.ramos-grid{
+		grid-template-columns: repeat(2,1fr);
+		gap:35px;
+	}
 
-  .ramos-grid{
-    gap: 30px;
-  }
+	.ramo-item img{
+		width:90px;
+		height:auto;
+	}
 
-  .ramo-item{
-    padding: 20px;
-  }
+	.ramo-item h3{
+		font-size:1.2rem;
+		line-height:1.5;
+	}
 
-  /* TEAM */
+	.ramo-item p{
+		font-size:1rem;
+		line-height:1.9;
+	}
+}
 
-  .chefia-grid1{
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* CELULARES GRANDES */
 
-  .chefia-box1{
-    padding: 65px;
-  }
+@media (max-width: 768px){
 
-  .chefia-header1 h2{
-    font-size: 44px;
-  }
+	.ramos-grid{
+		grid-template-columns:1fr;
+		gap:45px;
+	}
 
-  /* FOOTER */
+	.pull-top .rounded{
+		padding:45px 25px !important;
+	}
 
-  .footer-center-image img{
-    max-width: 260px;
-  }
+	.ramo-item{
+		max-width:100%;
+		margin:0 auto;
+	}
+
+	.ramo-item img{
+		width:85px;
+	}
+
+	.ramo-item h3{
+		font-size:1.1rem;
+		margin-bottom:15px;
+	}
+
+	.ramo-item p{
+		font-size:0.98rem;
+		line-height:1.85;
+	}
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 576px){
+
+	.pull-top .container{
+		padding-left:15px;
+		padding-right:15px;
+	}
+
+	.pull-top .rounded{
+		padding:35px 20px !important;
+	}
+
+	.ramos-grid{
+		gap:40px;
+	}
+
+	.ramo-item img{
+		width:75px;
+	}
+
+	.ramo-item h3{
+		font-size:1rem;
+		line-height:1.4;
+	}
+
+	.ramo-item p{
+		font-size:0.92rem;
+		line-height:1.75;
+	}
+}
+
+/* CELULARES MUITO PEQUENOS */
+
+@media (max-width: 380px){
+
+	.pull-top .rounded{
+		padding:30px 15px !important;
+	}
+
+	.ramo-item img{
+		width:70px;
+	}
+
+	.ramo-item h3{
+		font-size:0.95rem;
+	}
+
+	.ramo-item p{
+		font-size:0.88rem;
+	}
 }
 
 /* =========================================================
-   TABLETS
+   ABOUT RESPONSIVO
+========================================================= */
+
+@media screen and (max-width: 991px){
+
+	/* SOBRE O GRUPO */
+
+	.history-grid1{
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 40px !important;
+	}
+
+	.history-text1{
+		order: 1;
+		width: 100%;
+	}
+
+	.history-slider1{
+		order: 2;
+		width: 100%;
+		min-height: auto !important;
+		height: 450px !important;
+	}
+
+	/* MAIS DA HISTÓRIA */
+
+	.blog-content1{
+		column-count: 1 !important;
+		column-gap: 0 !important;
+	}
+
+	/* PASSO A PASSO */
+
+	.law-grid1{
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 25px !important;
+	}
+
+	.law-column1{
+		width: 100%;
+	}
+
+}
+
+
+/* CELULARES */
+
+@media screen and (max-width: 767px){
+
+	.history-text1 h2{
+		font-size: 2rem !important;
+		text-align: center;
+	}
+
+	.history-text1 h2::after{
+		margin: 15px auto 0;
+	}
+
+	.history-text1 p{
+		font-size: 1rem;
+		line-height: 1.9;
+		text-indent: 25px;
+	}
+
+	.history-slider1{
+		height: 300px !important;
+		border-radius: 20px;
+	}
+
+	.section-title1{
+		margin-bottom: 50px;
+	}
+
+	.section-title1 h2{
+		font-size: 2rem !important;
+	}
+
+	.section-title1 p{
+		font-size: 1rem;
+		line-height: 1.9;
+		text-align: justify;
+	}
+
+	.blog-content1 p{
+		font-size: 1rem;
+		line-height: 1.9;
+		text-indent: 25px;
+	}
+
+	.law-item1{
+		padding: 25px;
+	}
+
+	.law-number1{
+		font-size: 3rem;
+		right: 15px;
+		top: 15px;
+	}
+
+	.law-item1 h3{
+		font-size: 1.1rem;
+		padding-right: 40px;
+	}
+
+	.law-item1 p{
+		font-size: 0.95rem;
+		line-height: 1.8;
+	}
+}
+
+/* =========================================================
+   HISTÓRIA RESPONSIVA
 ========================================================= */
 
 @media (max-width: 991px){
 
-  /* =====================================================
-     FIX GLOBAL
-  ===================================================== */
+	/* =========================
+	   HISTÓRIA
+	========================= */
+
+	.history-grid{
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 40px !important;
+	}
+
+	.history-text{
+		order: 1;
+		width: 100%;
+	}
+
+	.history-slider{
+		order: 2;
+		width: 100%;
+		min-height: 450px;
+	}
+
+	/* =========================
+	   MAIS DA HISTÓRIA
+	========================= */
+
+	.blog-content{
+		column-count: 1 !important;
+		column-gap: 0 !important;
+	}
+
+	/* =========================
+	   LEI ESCOTEIRA
+	========================= */
+
+	.law-grid{
+		grid-template-columns: 1fr !important;
+		gap: 25px !important;
+	}
 
-  html,
-  body{
-    overflow-x: hidden !important;
-  }
-
-  body{
-    width: 100%;
-  }
-
-  .container,
-  .container-fluid{
-    width: 100% !important;
-    max-width: 100% !important;
-
-    padding-left: 22px !important;
-    padding-right: 22px !important;
-
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .row{
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  [class*="col-"]{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  section,
-  .section{
-    padding-top: 75px !important;
-    padding-bottom: 75px !important;
-  }
-
-  p,
-  li{
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
-    hyphens: auto;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5{
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* =====================================================
-     NAVBAR
-  ===================================================== */
-
-  #nav-principal{
-    padding: 10px 20px;
-  }
-
-  .img-logo{
-    max-width: 180px;
-  }
-
-  .navbar-collapse{
-    background: #ffffff;
-
-    padding: 20px;
-
-    margin-top: 15px;
-
-    border-radius: 18px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  }
-
-  .navbar-nav{
-    width: 100%;
-    gap: 5px;
-  }
-
-  .navbar-nav .nav-link{
-    padding: 14px 18px;
-    border-radius: 12px;
-    text-align: center;
-  }
-
-  /* =====================================================
-     TOPBAR
-  ===================================================== */
-
-  .topbar-buttons{
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .top-btn{
-    width: 100%;
-    text-align: center;
-  }
-
-  /* =====================================================
-     HERO
-  ===================================================== */
-
-  .gradient-banner{
-    padding: 120px 0 70px;
-    text-align: center;
-  }
-
-  .gradient-banner .row{
-    gap: 50px;
-  }
-
-  .gradient-banner h1{
-    font-size: 38px;
-  }
-
-  .gradient-banner p{
-    font-size: 16px;
-
-    margin: 0 auto 30px;
-
-    max-width: 650px;
-  }
-
-  .gradient-banner .btn{
-    margin: 0 auto;
-  }
-
-  .gradient-banner img{
-    max-width: 450px;
-  }
-
-  /* =====================================================
-     VIDEO
-  ===================================================== */
-
-  .video-promo{
-    padding: 90px 20px;
-    min-height: auto;
-  }
-
-  .video-promo .content-block{
-    width: 100%;
-  }
-
-  .video-promo h2{
-    font-size: 34px;
-    line-height: 1.3;
-  }
-
-  /* =====================================================
-     RAMOS
-  ===================================================== */
-
-  .pull-top{
-    margin-top: 0;
-  }
-
-  .rounded.shadow.p-5.bg-white{
-    padding: 35px !important;
-  }
-
-  .ramos-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .ramo-item{
-    padding: 25px 20px;
-  }
-
-  /* =====================================================
-     TEAM PAGE
-  ===================================================== */
-
-  .chefia-box1{
-    padding: 50px 35px;
-    border-radius: 30px;
-  }
-
-  .chefia-area1 + .chefia-area1{
-    margin-top: 90px;
-  }
-
-  .chefia-header1{
-    margin-bottom: 40px;
-  }
-
-  .chefia-header1 h2{
-    font-size: 38px;
-    line-height: 1.2;
-  }
-
-  .chefia-badge1{
-    font-size: 11px;
-    padding: 10px 20px;
-    letter-spacing: 1px;
-  }
-
-  .chefia-grid1{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .chefia-card1{
-    max-width: 100%;
-    border-radius: 24px;
-  }
-
-  .escotistas-filtros1{
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 35px;
-    padding-bottom: 8px;
-  }
-
-  .filtro-btn1{
-    padding: 12px 18px;
-    font-size: 11px;
-  }
-
-  /* =====================================================
-     ABOUT / LEGACY
-  ===================================================== */
-
-  .history-grid,
-  .history-grid1{
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 45px !important;
-  }
-
-  .history-text,
-  .history-text1{
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .history-text h2,
-  .history-text1 h2,
-  .section-title h2,
-  .section-title1 h2{
-    font-size: 2.5rem !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-  }
-
-  .history-text p,
-  .history-text1 p,
-  .blog-content p,
-  .blog-content1 p,
-  .section-title p,
-  .section-title1 p,
-  .law-item p,
-  .law-item1 p{
-    font-size: 1rem !important;
-    line-height: 1.95 !important;
-
-    text-align: justify !important;
-
-    text-indent: 25px !important;
-  }
-
-  .history-slider,
-  .history-slider1{
-    width: 100% !important;
-    max-width: 100% !important;
-
-    border-radius: 24px !important;
-
-    overflow: hidden !important;
-  }
-
-  .slider-track,
-  .slider-track1{
-    min-height: 450px;
-  }
-
-  .slide,
-  .slide1{
-    padding: 20px !important;
-  }
-
-  .slide img,
-  .slide1 img{
-    width: 100% !important;
-
-    max-height: 500px !important;
-
-    object-fit: contain !important;
-
-    margin: auto !important;
-  }
-
-  .blog-content,
-  .blog-content1{
-    column-count: 1 !important;
-    column-gap: 0 !important;
-  }
-
-  .law-grid,
-  .law-grid1{
-    display: flex !important;
-    flex-direction: column !important;
-
-    gap: 24px !important;
-  }
-
-  .law-column,
-  .law-column1{
-    width: 100% !important;
-    gap: 24px !important;
-  }
-
-  .law-item,
-  .law-item1{
-    width: 100% !important;
-
-    padding: 30px 24px !important;
-
-    border-radius: 24px !important;
-  }
-
-  .law-number,
-  .law-number1{
-    position: relative !important;
-
-    display: block !important;
-
-    top: auto !important;
-    right: auto !important;
-
-    font-size: 2.5rem !important;
-
-    margin-bottom: 15px !important;
-  }
-
-  .law-item h3,
-  .law-item1 h3{
-    font-size: 1.2rem !important;
-
-    line-height: 1.5 !important;
-
-    padding-right: 0 !important;
-
-    margin-bottom: 18px !important;
-  }
-
-  /* =====================================================
-     TESTIMONIAL
-  ===================================================== */
-
-  .testimonial{
-    padding: 80px 0;
-  }
-
-  .testimonial .block{
-    padding: 35px 25px;
-  }
-
-  /* =====================================================
-     FOOTER
-  ===================================================== */
-
-  .footer .row{
-    gap: 50px;
-    row-gap: 50px !important;
-  }
-
-  .footer-info,
-  .footer-links,
-  .footer-center-image{
-    text-align: center !important;
-  }
-
-  .footer-center-image{
-    order: -1;
-  }
-
-  .footer-links-grid{
-    justify-content: center !important;
-    gap: 40px !important;
-  }
-
-  .footer-image-left{
-    display: flex;
-    justify-content: center;
-  }
-
-  .footer-social{
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-  }
-
-  .center-logo img{
-    max-width: 140px;
-    margin: auto;
-  }
-
-  .footer-copyright .row{
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .footer-copyright .col-auto{
-    width: 100%;
-  }
 }
 
 /* =========================================================
-   SMARTPHONES
+   CELULARES
 ========================================================= */
 
 @media (max-width: 767px){
 
-  /* GERAL */
+	/* HISTÓRIA */
 
-  .section{
-    padding: 70px 0;
-  }
+	.history-text h2{
+		font-size: 2.2rem;
+		text-align: center;
+	}
 
-  /* HERO */
+	.history-text h2::after{
+		margin: 15px auto 0;
+	}
 
-  .gradient-banner{
-    padding: 110px 0 60px;
-  }
+	.history-text p{
+		font-size: 1rem;
+		line-height: 1.9;
+		text-indent: 25px;
+	}
 
-  .gradient-banner h1{
-    font-size: 30px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-  }
+	.history-slider{
+		min-height: 320px;
+		border-radius: 20px;
+	}
 
-  .gradient-banner p{
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-  }
+	/* TÍTULOS */
 
-  .gradient-banner img{
-    max-width: 320px;
-    margin-bottom: 20px;
-  }
+	.section-title{
+		margin-bottom: 50px;
+	}
 
-  .btn-main-md{
-    width: 100%;
-    max-width: 280px;
-  }
+	.section-title h2{
+		font-size: 2.2rem;
+	}
 
-  /* VIDEO */
+	.section-title p{
+		font-size: 1rem;
+		line-height: 1.9;
+		text-align: justify;
+	}
 
-  .video-promo{
-    padding: 70px 15px;
-  }
+	/* BLOG */
 
-  .video-promo h2{
-    font-size: 26px;
-    line-height: 1.4;
-  }
+	.blog-content p{
+		font-size: 1rem;
+		line-height: 1.9;
+		text-indent: 25px;
+	}
 
-  .video-promo p{
-    font-size: 15px;
-  }
+	.blog-content li{
+		font-size: 1rem;
+		line-height: 1.8;
+	}
 
-  .video-play-btn{
-    width: 85px;
-    height: 85px;
-    line-height: 85px;
-  }
+	/* LEIS */
 
-  /* RAMOS */
+	.law-item{
+		padding: 25px;
+	}
 
-  .rounded.shadow.p-5.bg-white{
-    padding: 25px !important;
-    border-radius: 25px !important;
-  }
+	.law-number{
+		font-size: 3rem;
+		top: 15px;
+		right: 15px;
+	}
 
-  .ramos-grid{
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+	.law-item h3{
+		font-size: 1.1rem;
+		padding-right: 40px;
+	}
 
-  .ramo-item{
-    padding: 25px 15px;
-  }
+	.law-item p{
+		font-size: 0.95rem;
+		line-height: 1.8;
+	}
 
-  .ramo-item h3{
-    font-size: 20px;
-  }
-
-  .ramo-item p{
-    font-size: 15px;
-    line-height: 1.8;
-  }
-
-  /* =====================================================
-     TEAM PAGE
-  ===================================================== */
-
-  .faq-escoteiro{
-    padding-top: 70px !important;
-    padding-bottom: 70px !important;
-  }
-
-  .chefia-box1{
-    padding: 35px 22px;
-    border-radius: 24px;
-  }
-
-  .chefia-area1 + .chefia-area1{
-    margin-top: 70px;
-  }
-
-  .chefia-header1{
-    margin-bottom: 30px;
-  }
-
-  .chefia-header1 h2{
-    font-size: 28px;
-    line-height: 1.25;
-  }
-
-  .chefia-badge1{
-    font-size: 10px;
-    padding: 9px 16px;
-  }
-
-  .chefia-grid1{
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .chefia-card1{
-    width: 100%;
-    max-width: 100%;
-    border-radius: 22px;
-  }
-
-  .chefia-foto1{
-    width: 100%;
-  }
-
-  .escotistas-filtros1{
-    justify-content: flex-start;
-
-    gap: 10px;
-
-    margin-top: 28px;
-
-    padding-left: 2px;
-    padding-right: 2px;
-  }
-
-  .filtro-btn1{
-    padding: 11px 16px;
-    font-size: 10px;
-    border-radius: 100px;
-  }
-
-  /* ABOUT */
-
-  .history-text h2,
-  .history-text1 h2,
-  .section-title h2,
-  .section-title1 h2{
-    font-size: 2.3rem !important;
-    line-height: 1.15 !important;
-  }
-
-  .history-text p,
-  .history-text1 p,
-  .blog-content p,
-  .blog-content1 p,
-  .section-title p,
-  .section-title1 p,
-  .law-item p,
-  .law-item1 p{
-    font-size: 1rem !important;
-    line-height: 1.95 !important;
-    text-indent: 0 !important;
-  }
-
-  .history-slider,
-  .history-slider1{
-    height: 360px !important;
-  }
-
-  .law-item,
-  .law-item1{
-    padding: 28px 22px !important;
-  }
-
-  /* TESTIMONIAL */
-
-  .section-title1 h2{
-    font-size: 25px;
-  }
-
-  .testimonial .block{
-    padding: 30px 20px;
-  }
-
-  .testimonial .block p{
-    font-size: 15px;
-    line-height: 1.8;
-  }
-
-  /* FOOTER */
-
-  .footer{
-    text-align: center;
-  }
-
-  .footer h5{
-    font-size: 24px;
-  }
-
-  .footer p,
-  .footer a{
-    font-size: 15px;
-  }
-
-  .footer-links-grid{
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .links-column{
-    width: 100%;
-  }
-
-  .footer-center-image img{
-    max-width: 180px;
-  }
-
-  .footer-image-left img{
-    max-width: 220px;
-  }
-
-  .footer-social{
-    gap: 18px;
-    justify-content: center;
-  }
+	.law-item h4{
+		font-size: 0.85rem;
+	}
 }
 
 /* =========================================================
-   SMARTPHONES PEQUENOS
+   CELULARES PEQUENOS
 ========================================================= */
 
 @media (max-width: 480px){
 
-  /* NAVBAR */
+	.history-text h2,
+	.section-title h2{
+		font-size: 1.9rem;
+	}
 
-  .img-logo{
-    max-width: 150px;
-  }
+	.history-slider{
+		min-height: 260px;
+	}
 
-  /* HERO */
+	.history-text p,
+	.blog-content p,
+	.law-item p{
+		font-size: 0.95rem;
+	}
 
-  .gradient-banner h1{
-    font-size: 26px;
-  }
+	.law-item{
+		padding: 20px;
+	}
 
-  .gradient-banner p{
-    font-size: 14px;
-  }
-
-  .gradient-banner img{
-    max-width: 260px;
-  }
-
-  /* VIDEO */
-
-  .video-promo h2{
-    font-size: 22px;
-  }
-
-  /* RAMOS */
-
-  .ramo-item{
-    padding: 20px 12px;
-  }
-
-  .ramo-item img{
-    width: 80px;
-  }
-
-  /* TEAM */
-
-  .chefia-box1{
-    padding: 28px 16px;
-    border-radius: 20px;
-  }
-
-  .chefia-header1 h2{
-    font-size: 24px;
-  }
-
-  .chefia-badge1{
-    font-size: 9px;
-    letter-spacing: .5px;
-  }
-
-  .chefia-grid1{
-    gap: 18px;
-  }
-
-  .filtro-btn1{
-    font-size: 9px;
-    padding: 10px 14px;
-  }
-
-  /* ABOUT */
-
-  .history-text h2,
-  .history-text1 h2,
-  .section-title h2,
-  .section-title1 h2{
-    font-size: 2rem !important;
-  }
-
-  .history-slider,
-  .history-slider1{
-    height: 290px !important;
-  }
-
-  .law-item,
-  .law-item1{
-    padding: 24px 18px !important;
-  }
-
-  .law-number,
-  .law-number1{
-    font-size: 2rem !important;
-  }
-
-  /* TESTIMONIAL */
-
-  .testimonial .block{
-    padding: 25px 18px;
-  }
-
-  /* FOOTER */
-
-  .footer-social{
-    gap: 14px;
-  }
-
-  .footer-social i{
-    font-size: 24px !important;
-  }
 }
