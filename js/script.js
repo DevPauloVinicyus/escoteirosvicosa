@@ -373,3 +373,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const toggler = document.querySelector(".navbar-toggler");
+    const menu = document.querySelector("#navbarCollapse");
+
+    toggler.addEventListener("click", function () {
+
+        menu.classList.toggle("show");
+
+        toggler.classList.toggle("active");
+
+        if(menu.classList.contains("show")){
+            document.body.style.overflow = "hidden";
+        }else{
+            document.body.style.overflow = "";
+        }
+
+    });
+
+    document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+
+        link.addEventListener("click", function(){
+
+            menu.classList.remove("show");
+
+            toggler.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        });
+
+    });
+
+});
+

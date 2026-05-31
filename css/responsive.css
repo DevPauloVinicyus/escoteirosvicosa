@@ -433,7 +433,6 @@
 
 }
 
-
 /* CELULARES */
 
 @media screen and (max-width: 767px){
@@ -500,7 +499,7 @@
 }
 
 /* =========================================================
-   HISTÓRIA RESPONSIVA
+   HISTÓRIA RESPONSIVA LEGADO
 ========================================================= */
 
 @media (max-width: 991px){
@@ -522,8 +521,33 @@
 
 	.history-slider{
 		order: 2;
+
 		width: 100%;
-		min-height: 450px;
+
+		position: relative;
+
+		height: 500px !important;
+		min-height: 500px !important;
+
+		display: block;
+	}
+
+	.slider-track{
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.slide{
+		position: absolute;
+		inset: 0;
+	}
+
+	.slide img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
 	}
 
 	/* =========================
@@ -543,16 +567,13 @@
 		grid-template-columns: 1fr !important;
 		gap: 25px !important;
 	}
-
 }
 
 /* =========================================================
-   CELULARES
+   TABLETS
 ========================================================= */
 
 @media (max-width: 767px){
-
-	/* HISTÓRIA */
 
 	.history-text h2{
 		font-size: 2.2rem;
@@ -570,11 +591,10 @@
 	}
 
 	.history-slider{
-		min-height: 320px;
+		height: 400px !important;
+		min-height: 400px !important;
 		border-radius: 20px;
 	}
-
-	/* TÍTULOS */
 
 	.section-title{
 		margin-bottom: 50px;
@@ -590,8 +610,6 @@
 		text-align: justify;
 	}
 
-	/* BLOG */
-
 	.blog-content p{
 		font-size: 1rem;
 		line-height: 1.9;
@@ -602,8 +620,6 @@
 		font-size: 1rem;
 		line-height: 1.8;
 	}
-
-	/* LEIS */
 
 	.law-item{
 		padding: 25px;
@@ -631,7 +647,7 @@
 }
 
 /* =========================================================
-   CELULARES PEQUENOS
+   CELULARES
 ========================================================= */
 
 @media (max-width: 480px){
@@ -642,7 +658,8 @@
 	}
 
 	.history-slider{
-		min-height: 260px;
+		height: 300px !important;
+		min-height: 300px !important;
 	}
 
 	.history-text p,
@@ -654,5 +671,280 @@
 	.law-item{
 		padding: 20px;
 	}
+}
 
+/* =========================================================
+   TEAM ESCOTISTAS RESPONSIVO
+========================================================= */
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width:991px){
+
+    /* PAGE TITLE */
+
+    .page-title h1{
+        font-size:2.6rem;
+        line-height:1.2;
+    }
+
+    .page-title p{
+        font-size:1rem;
+        line-height:1.8;
+        max-width:700px;
+        margin:auto;
+    }
+
+    /* FILTROS */
+
+    .escotistas-filtros1{
+        display:grid !important;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        margin-top:30px;
+    }
+
+    .filtro-btn1{
+        width:100%;
+        padding:14px 16px;
+        text-align:center;
+        white-space:normal;
+    }
+
+    /* BOX */
+
+    .chefia-box1{
+        padding:50px 30px;
+        border-radius:30px;
+    }
+
+    .chefia-area1 + .chefia-area1{
+        margin-top:80px;
+    }
+
+    /* HEADER */
+
+    .chefia-header1{
+        margin-bottom:70px;
+    }
+
+    .chefia-header1 h2{
+        font-size:38px;
+        line-height:1.2;
+    }
+
+    /* =====================================================
+       CARROSSEL
+    ===================================================== */
+
+    .chefia-grid1{
+        display:block !important;
+        position:relative;
+    }
+
+    .chefia-grid1 .slick-list{
+        overflow:hidden;
+    }
+
+    .chefia-grid1 .slick-track{
+        display:flex;
+        align-items:flex-start;
+    }
+
+    .chefia-grid1 .slick-slide{
+        height:auto !important;
+        padding:0 10px;
+    }
+
+    .chefia-grid1 .slick-slide > div{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        height:auto !important;
+    }
+
+    /* CARD */
+
+    .chefia-card1{
+
+        width:100%;
+        max-width:420px;
+
+        margin:0 auto;
+
+        height:auto !important;
+        min-height:0 !important;
+        max-height:none !important;
+
+        overflow:hidden;
+    }
+
+    /* FOTO ORIGINAL */
+
+    .chefia-foto1{
+
+        width:100%;
+
+        height:auto !important;
+
+        min-height:0 !important;
+
+        max-height:none !important;
+
+        overflow:hidden;
+    }
+
+    .chefia-foto1 img{
+
+        width:100%;
+
+        height:auto !important;
+
+        display:block;
+    }
+
+    /* SETAS */
+
+    .chefia-grid1 .slick-prev,
+    .chefia-grid1 .slick-next{
+
+        width:50px;
+        height:50px;
+
+        top:-65px;
+
+        border-radius:50%;
+
+        background:#ffcc00;
+
+        z-index:1000;
+    }
+
+    .chefia-grid1 .slick-prev{
+        left:calc(50% - 65px);
+    }
+
+    .chefia-grid1 .slick-next{
+        right:calc(50% - 65px);
+    }
+
+    .chefia-grid1 .slick-prev:before,
+    .chefia-grid1 .slick-next:before{
+        color:#420000;
+        opacity:1;
+        font-size:22px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width:767px){
+
+    .page-title h1{
+        font-size:2.1rem;
+    }
+
+    .page-title p{
+        font-size:1rem;
+        padding:0 10px;
+    }
+
+    .escotistas-filtros1{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .filtro-btn1{
+        font-size:11px;
+        padding:14px;
+    }
+
+    .chefia-box1{
+        padding:30px 20px;
+        border-radius:25px;
+    }
+
+    .chefia-badge1{
+        font-size:11px;
+        padding:10px 18px;
+    }
+
+    .chefia-header1{
+        margin-bottom:60px;
+    }
+
+    .chefia-header1 h2{
+        font-size:30px;
+        line-height:1.3;
+    }
+
+    .chefia-card1{
+        max-width:350px;
+    }
+
+    .chefia-grid1 .slick-prev,
+    .chefia-grid1 .slick-next{
+
+        width:45px;
+        height:45px;
+
+        top:-55px;
+    }
+
+    .chefia-grid1 .slick-prev{
+        left:calc(50% - 58px);
+    }
+
+    .chefia-grid1 .slick-next{
+        right:calc(50% - 58px);
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width:480px){
+
+    .page-title h1{
+        font-size:1.8rem;
+    }
+
+    .page-title p{
+        font-size:.95rem;
+    }
+
+    .chefia-box1{
+        padding:25px 15px;
+    }
+
+    .chefia-header1 h2{
+        font-size:26px;
+    }
+
+    .chefia-badge1{
+        font-size:10px;
+        letter-spacing:1px;
+    }
+
+    .filtro-btn1{
+        font-size:10px;
+        padding:12px;
+    }
+
+    .chefia-card1{
+        max-width:300px;
+    }
+
+    .chefia-grid1 .slick-prev,
+    .chefia-grid1 .slick-next{
+        width:42px;
+        height:42px;
+    }
 }
